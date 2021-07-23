@@ -10,19 +10,14 @@ body {
 }
 
 .wrapper {
-   max-width: 1100px;
+   max-width: 1000px;
    display: grid;
    grid-template-areas:
       "head main"
       "head foo";
    grid-template-columns: 35% 1fr;
+   grid-template-rows: auto 100px;
    margin: 0 auto;
-}
-
-main {
-   grid-area: main;
-   min-height: calc(100vh - 80px);
-   background-color: #ffff;
 }
 
 header {
@@ -34,14 +29,21 @@ header {
    z-index: 0;
 }
 
+main {
+   box-sizing: border-box;
+   grid-area: main;
+   min-height: calc(100% - 120px);
+   background-color: #ffff;
+}
+
 footer {
+   box-sizing: border-box;
    grid-area: foo;
-   height: 80px;
    background-color: #ffff;
 }
 
 .container {
-   padding: 4em 4em;
+   padding: 4em 3em;
    text-align: center;
 }
 
@@ -100,7 +102,7 @@ h3 {
    cursor: pointer;
 }
 
-.header__list a {
+li a {
    display: flex;
    align-items: center;
    text-decoration: none;
@@ -133,6 +135,31 @@ h3 {
    fill: #0cb0fc;
 }
 
-.header__list svg {
+li svg {
    margin-right: 0.5em;
+}
+
+footer {
+   padding: 0 80px 30px;
+}
+
+footer>hr {
+   min-width: 100%;
+}
+
+footer p {
+   text-align: center;
+}
+
+.footer__list {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: flex-end;
+   padding: 0;
+   margin-bottom: 15px;
+   list-style-type: none;
+}
+
+.link__rs:hover svg {
+   fill: #faea68;
 }
