@@ -15,9 +15,10 @@ body {
    grid-template-areas:
       "head main"
       "head foo";
-   grid-template-columns: 35% 1fr;
-   grid-template-rows: auto 100px;
+   grid-template-columns: 350px 1fr;
+   grid-template-rows: auto 130px;
    margin: 0 auto;
+   overflow: hidden;
 }
 
 mark {
@@ -36,7 +37,7 @@ header {
 main {
    box-sizing: border-box;
    grid-area: main;
-   min-height: calc(100% - 120px);
+   min-height: calc(100% - 130px);
    padding: 40px 50px 0;
    background-color: #ffff;
 }
@@ -44,6 +45,7 @@ main {
 footer {
    box-sizing: border-box;
    grid-area: foo;
+   padding: 10px 80px 30px;
    background-color: #ffff;
 }
 
@@ -149,7 +151,7 @@ li a {
 }
 
 li svg {
-   margin-right: 0.5em;
+   padding-right: 0.5em;
 }
 
 .skills__list svg {
@@ -162,6 +164,7 @@ li svg {
 }
 
 .skills__list li {
+   padding: 0.5em;
    text-align: center;
 }
 
@@ -187,13 +190,13 @@ li svg {
 .projects a {
    display: flex;
    text-decoration: none;
+   min-height: 180px;
    font-size: 18px;
    color: #363636;
 }
 
 .projects img {
    width: 180px;
-   height: 180px;
    object-fit: cover;
 }
 
@@ -203,11 +206,7 @@ li svg {
 
 .projects__title {
    margin-bottom: 1em;
-   font-weight: 600;
-}
-
-footer {
-   padding: 0 80px 30px;
+   font-weight: 700;
 }
 
 footer>hr {
@@ -227,6 +226,82 @@ footer p {
    list-style-type: none;
 }
 
+.footer__list li {
+   padding: 0 10px;
+}
+
 .link__rs:hover svg {
    fill: #fbc933;
+}
+
+@media (max-width: 860px) {
+   body {
+      background-color: #ffffff;
+   }
+
+   main {
+      padding: 40px 35px 0;
+   }
+
+   footer {
+      padding-right: 30px;
+      padding-left: 30px;
+   }
+
+   .container img {
+      width: 100%;
+      object-position: 50% 33%;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   header {
+      min-height: fit-content;
+   }
+
+   header hr {
+      max-width: 100%;
+   }
+
+   .wrapper {
+      display: block;
+   }
+
+   .container {
+      padding: 0 2.2em;
+   }
+
+   .header {
+      margin-top: 0;
+   }
+
+   .header__img {
+      position: relative;
+      height: 250px;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   body {
+      font-size: 14px;
+   }
+
+   .skills__list {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+   }
+
+   .education__list p {
+      flex-basis: 200px;
+   }
+
+   .projects a {
+      display: block;
+   }
+
+   .projects img {
+      height: 180px;
+      width: 100%;
+      text-align: center;
+   }
 }
