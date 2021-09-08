@@ -23,12 +23,25 @@ _My main goal is to complete the training in RS.SCHOOL and get a new knowledge. 
 
 - htmlacademy.ru
 - SENLA - HTML, CSS, React (2020 - 2021)
+- Rolling Scopes School - JS / FRONT-END. STAGE 0
+
+### Code Example
+
+Find Factorial
+
+`function factorial (n) {
+  return n === 0 ? 1 : n < 0 ? null : n * factorial(n-1)
+}`
 
 ### Completed projects
 
 [Animal shelter website](https://senla-animal-shelter.netlify.app/)
 
 [TODO](https://todo-senla.netlify.app/)
+
+[js-clock](https://rolling-scopes-school.github.io/kenor-me-JSFEPRESCHOOL/js-clock/)
+
+[Photofilter](https://rolling-scopes-school.github.io/kenor-me-JSFEPRESCHOOL/photofilter/)
 
 ### Languages
 
