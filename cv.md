@@ -29,7 +29,7 @@ _My main goal is to complete the training in RS.SCHOOL and get a new knowledge. 
 
 Find Factorial
 
-```function factorial (n) { return n === 0 ? 1 : n < 0 ? null : n * factorial(n-1) }```
+`function factorial (n) { return n === 0 ? 1 : n < 0 ? null : n * factorial(n-1) }`
 
 ### Completed projects
 
